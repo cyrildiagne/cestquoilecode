@@ -1,0 +1,243 @@
+* {
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	margin:0px;
+	padding:0px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: none;
+}
+
+body {
+	/*background-color:rgb(93,93,93);*/
+	background-color:rgb(34, 33, 31);
+	background: radial-gradient(ellipse at center, rgb(34, 33, 31) 0%, rgb(4, 3, 1) 100%);
+	font-size : 1.3em;
+	line-height: 1.5em;
+}
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+h1 {
+	position: absolute;
+	top: -80px;
+	color: white;
+	font-family: monospace;
+	font-size: 40px;
+	left: 7px;
+	/*color : #e6db74;*/
+}
+
+#superContainer {
+	position:absolute;
+	width:1000px;
+	height:500px;
+	top:50%;
+	left:50%;
+	margin-left:-500px;
+	margin-top:-250px;
+	border: solid 5px rgb(21, 20, 18);
+}
+
+button, input { font-size:0.75em; padding: 10px; border:none; border-radius:3px; cursor:pointer;}
+
+#tabs { position: absolute; bottom : -40px; left:20px;}
+#tabs li { display: inline; }
+#tabs li button { padding: 30px 20px 10px; font-size:0.85em;}
+#tabs li .active { color:white; background-color: #ae81ff; cursor:default;}
+
+span.cm-variable.action {
+	color: cyan;
+}
+span.cm-variable.loop {
+	color: rgb(210, 8, 100);
+}
+span.cm-operator.arrow {
+	color: rgb(210, 110, 0);
+}
+
+#codeContainer {
+	position:absolute;
+	width:500px;
+	left:0;
+	top:0;
+	height:500px;
+	overflow:hidden;
+	background-color:white;
+	box-shadow: 0px 5px 25px #000;
+}
+
+#displayContainer {
+	position:absolute;
+	left:500px;
+	width:500px;
+	height:500px;
+	top:0px;
+	border:none;
+	overflow:hidden;
+}
+
+.CodeMirror * {
+	-webkit-touch-callout: text;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	/*background: linear-gradient(to right, rgba(61,61,61,1) 0%, rgba(61,61,61,1) 58%, rgba(38,38,38,1) 100%);*/
+/*	font-size: 1.01em;
+	line-height: 1.05em;*/
+}
+
+.CodeMirror-scroll {
+	height: 500px; 
+	width: 500px;
+	overflow: auto;
+	background: linear-gradient(to right, rgba(39,40,34,1) 0%, rgba(39,40,34,1) 25%, rgba(19,20,16,1) 85%, rgba(8,8,6,1) 100%);
+}
+
+.CodeMirror-lines {
+	padding : 1.3em;
+}
+
+.hidden {
+	display: none;
+}
+
+.errorLine {
+	background:#fdd !important;
+}
+
+.highlightLine {
+	background:#bfb !important;
+}
+
+.errorMarker {
+	background-image:url("../images/error.png") !important;
+	background-repeat:no-repeat !important;
+	background-position:center center !important;
+}
+
+#errorReport {
+	position:absolute;
+	width:490px;
+	height:auto;
+	min-height:30px !important;
+	top:0px;
+	left:50%;
+	border:1px solid #ccc;
+	background-color:white;
+	z-index:11;
+
+	-moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.7);
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.7);
+
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	padding-left:7px;
+
+	color:#111;
+	line-height:30px;
+
+	font-family:Courier, "Courier New";
+	font-size:12px;
+	font-weight:bold;
+
+	opacity: 1;
+	-webkit-transition: opacity 0.5s linear;
+}
+
+.hideReport {
+	opacity:0 !important;
+}
+
+a {
+	color: #222;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+#code {
+	display: none;
+}
+
+#TouchCodeMainCanvas {
+	background-color:white;
+}
+
+#SketchpadContainer {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#clear, #color {
+	position: absolute;
+	top : 10px;
+	left : 10px;
+}
+
+#color {
+	left : 100px;
+	width: 57px;
+}
+
+#sourceHolder{
+	display:none;
+}
+
+/* HELP */
+
+#help {
+	box-sizing : border-box;
+	height:500px;
+	overflow: scroll;
+	padding : 1em;
+	color : #303030;
+	font-family: sans-serif;
+	font-size: 0.8em;
+	background: linear-gradient(to right, rgba(199,200,194,1) 0%, rgba(189,190,184,1) 25%, rgba(119,120,116,1) 85%, rgba(68,68,66,1) 100%);
+}
+
+#help h2 {
+	font-size: 1.2em;
+}
+
+.h_actions h2 {
+	margin-top: 1em;
+}
+
+.h_settings b {
+	color : #a6e22e;
+}
+
+.h_actions b {
+	color : cyan;
+}
+
+#help b {
+	font-family: monospace;
+	font-size: 1.4em;
+	background-color: black;
+	padding: 0.1em 0.3em;
+}
+
+#help p {
+	margin-top: 1.2em;
+	/*font-size: 0.8em;*/
+	line-height: 1.3em;
+}
+
+.h_settings

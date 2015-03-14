@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="CodeMirror-2.21/lib/codemirror.js"></script>
+	<script src="CodeMirror-2.21/mode/coffeescript/coffeescript.js"></script>
+	<script type="text/javascript" src="scripts/coffee-script.js"></script>
+	<script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.wheelcolorpicker.js"></script>
+	<script type="text/javascript" src="scripts/responsive-sketchpad.js"></script>
+	<script src="scripts/editor.js"></script>
+	<link rel="stylesheet" href="CodeMirror-2.21/lib/codemirror.css">
+	<link rel="stylesheet" href="CodeMirror-2.21/theme/monokai.css">
+	<link rel="stylesheet" href="styles/editor_stylesheet.css">
+	<link rel="stylesheet" href="styles/wheelcolorpicker.dark.css" />
+	<title>C'est quoi le code ?</title>
+</head>
+<body>
+
+<div id="superContainer">
+	<ul id="tabs">
+		<li><button id='b_code' class="active">Code</button></li>
+		<li><button id='b_drawing'>Dessin</button></li>
+		<li><button id='b_help'>Aide</button></li>
+	</ul>
+	<h1> # C'est quoi le code ? </h1>
+	 <div id="codeContainer">
+	 	<div id="SketchpadContainer" class="hidden">
+			<canvas id="Sketchpad" width="500" height="500">
+				Your Browser does not support Canvas
+			</canvas>
+			<button id='clear'>Effacer</button>
+			<input type="text" id='color'>#ffffff</input>
+		</div>
+		<textarea id="code" name="code">
+# nombre d'étoile
+nombre = 1
+
+# taille des étoiles
+taille = 20
+
+# animation
+animation = ->
+
+	# couleur du fond
+	prend_feuille 'noire'
+	
+	# couleur de dessin
+	prend_crayon 'blanc'
+	
+	# dessine chaque forme
+	dessine_forme nombre, taille, 'rond'
+		</textarea>
+
+	
+		<div id="help" class="hidden">
+			<div class="content">
+				<div class="h_settings">
+					<h2>Réglages</h2>
+					<p><b>vitesse</b> → vitesse de déplacement<br> </p>
+					<p><b>nombre</b> → nombre d'étoile (maximum 5000)<br></p>
+					<p><b>taille</b> → taille des étoiles<br> </p>
+				</div>
+				<div class="h_actions">
+					<h2>Actions</h2>
+					<p>
+						<b>prend_feuille</b> → choisi une couleur de fond<br>
+						<i>couleur</i> : nom de la couleur
+					</p>
+					<p>
+						<b>prend_crayon</b> → choisi une couleur de dessin<br>
+						<i>couleur</i> : nom de la couleur
+					</p>
+					<p>
+						<b>avance_de</b> → avance les étoiles<br>
+						<i>vitesse</i> : vitesse de déplacement<br>
+					</p>
+					<p>
+						<b>tourne_de</b> → tourne les étoiles<br>
+						<i>rotation</i> : valeur de rotation<br>
+					</p>
+					<p>
+						<b>dessine_etoiles</b> → dessine toutes les étoiles<br>
+						<i>nombre</i> : nombre d'étoile<br>
+						<i>taille</i> : taille des étoies<br>
+						<i>type</i> : type d'étoile (options possibles : 'rond', 'carré', 'dessin')<br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="displayContainer">
+		<canvas id="TouchCodeMainCanvas" width="500" height="500">
+			Your Browser does not support Canvas
+		</canvas>
+		<div id="sourceHolder"></div>
+	</div>
+
+</div>
+<div id="errorReport" class="hideReport"></div>
+</body>
+</html>
