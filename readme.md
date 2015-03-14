@@ -1,7 +1,7 @@
 # C'est quoi le code
 
 
-![screenshot](https://raw.githubusercontent.com/kikko/ecal_handline_workshop/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/kikko/cestquoilecode/master/screenshot.png)
 
 http://cestquoilecode.fr
 
